@@ -1,10 +1,8 @@
-
 PINK=$'\e[35;40m'
 GREEN=$'\e[32;40m'
 YELLOW=$'\e[33;40m'
 RED=$'\e[0;31m'
 
-# export PS1="\e[0;32m[\t]\e[0m${YELLOW}\$(parse_git_branch) => \e[1;35m\w\e[0m \n-> "
 export PS1="\e[0;32m[\t]\e[0m${YELLOW}\$(parse_git_branch) \e[0m\$(parse_git_color) \e[1;35m\w\e[0m \n-> "
 
 export CLICOLOR=1
@@ -24,7 +22,7 @@ parse_git_color() {
 	  if [ "$(parse_git_dirty)" == "*" ] ; then
 	    echo "${RED}●" # dirty state
 	  else
-	    echo "${GREEN}●" # as these are emojis colors do not matter, but let's leave them defined anyway
+	    echo "${GREEN}●"
 	  fi
 	else
 		echo "${YELLOW}=>"
