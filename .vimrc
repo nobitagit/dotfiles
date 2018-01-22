@@ -16,6 +16,11 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'dracula/vim'
 Plugin 'mhartington/oceanic-next'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+if has("gui_running")
+  Plugin 'Valloric/YouCompleteMe'
+endif
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -57,8 +62,6 @@ set number
 set relativenumber
 set hlsearch
 set ruler
-" make nerdtree support deletion
-set modifiable
 
 " automatically run nerdtree on startup
 " autocmd vimenter * NERDTree 
@@ -104,6 +107,9 @@ set path+=**
 
 " remove all scrollbars from the gui
 set guioptions=
+
+" enable jsx for non-.jsx files as well
+let g:jsx_ext_required = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -159,8 +165,8 @@ set si "Smart indent
 set wrap "Wrap lines
 
 "set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-set listchars=tab:>·,trail:␣,extends:>,precedes:<,space:␣
-set list
+" set listchars=tab:>·,trail:␣,extends:>,precedes:<,space:␣
+" set list
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Remappings
@@ -252,4 +258,3 @@ endfunction
 
 " avoid line numbers when copying with a mouse
 se mouse+=a
-
