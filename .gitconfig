@@ -1,0 +1,30 @@
+# my ~/.gitconfig aliases
+[alias]
+        st = status
+        ci = commit
+        co = checkout
+        br = branch
+        lol = log --oneline
+        hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+        doh = reset --soft HEAD~1
+	# show the branches sorted by modified date (older to recent)
+        # to reverse it just "git brr | tail -r"	
+        brr = for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads
+[user]
+        name =
+        email =
+[core]
+        excludesfile = /Users/nobitagit/.gitignore_global
+[difftool "sourcetree"]
+        cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+        path =
+[mergetool "sourcetree"]
+        cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+        trustExitCode = true
+[commit]
+        # template = /Users/nobitagit/.stCommitMsg
+[filter "lfs"]
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+        required = true
