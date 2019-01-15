@@ -36,9 +36,8 @@ if [ -f ~/.git-completion.bash ]; then
 fi
 
 # Aliases
-alias code='cd ~/Code'
-alias codl='cd ~/Code ; ls -la'
-alias work='cd ~/Code/work'
+alias hack='cd ~/Coding'
+alias work='cd ~/Coding/work'
 alias cpath='pwd|pbcopy'
 alias mvim='open -a "macvim"'
 # open in Sublime (followed by the directory or file path, or just the .)
