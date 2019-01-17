@@ -64,3 +64,4 @@ mkdir ~/.nvm
 brew install yarn
 
 brew cask install spectacle
+brew cask install skype
