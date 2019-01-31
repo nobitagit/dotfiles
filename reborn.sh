@@ -31,7 +31,7 @@ brew cask install firefox
 
 echo "Installing Visual Studio Code"
 brew cask install visual-studio-code
-cho "/n"
+echo "/n"
 echo "Enabling key repeat for VSCode Vim mode"
 # enable key repeating for VS Codes VIM mode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false         # For VS Code
@@ -62,6 +62,9 @@ mkdir -p ~/Coding/Personal
 brew install nvm
 mkdir ~/.nvm
 brew install yarn
+
+# Command line gitignores https://karan.goel.io/joe/
+brew tap karan/karan && brew install gitignore
 
 brew cask install spectacle
 brew cask install skype
