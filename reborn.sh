@@ -63,8 +63,5 @@ brew install nvm
 mkdir ~/.nvm
 brew install yarn
 
-# Command line gitignores https://karan.goel.io/joe/
-brew tap karan/karan && brew install gitignore
-
 brew cask install spectacle
 brew cask install skype
