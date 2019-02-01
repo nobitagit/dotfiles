@@ -36,6 +36,22 @@ function title {
     echo -ne "\033]0;"$*"\007"
 }
 
+# https://superuser.com/a/1023410/325858
+# Set iTerm tab color via command line
+function color {
+    case $1 in
+    green)
+    echo -e "Done.\033]6;1;bg;red;brightness;57\a\033]6;1;bg;green;brightness;197\a\033]6;1;bg;blue;brightness;77\a"
+    ;;
+    red)
+    echo -e "Done.\033]6;1;bg;red;brightness;270\a \033]6;1;bg;green;brightness;60\a \033]6;1;bg;blue;brightness;83\a"
+    ;;
+    orange)
+    echo -e "Done.\033]6;1;bg;red;brightness;227\a\033]6;1;bg;green;brightness;143\a\033]6;1;bg;blue;brightness;10\a"
+    ;;
+    esac
+}
+
 # Autocompletion for git commands and branches.
 # See: http://code-worrier.com/blog/autocomplete-git/
 if [ -f ~/.git-completion.bash ]; then
