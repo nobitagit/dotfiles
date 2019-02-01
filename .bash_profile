@@ -29,6 +29,13 @@ parse_git_color() {
 	fi
 }
 
+# https://superuser.com/a/599156/325858
+# name the current tab in iTerm 
+# $ title tabName
+function title {
+    echo -ne "\033]0;"$*"\007"
+}
+
 # Autocompletion for git commands and branches.
 # See: http://code-worrier.com/blog/autocomplete-git/
 if [ -f ~/.git-completion.bash ]; then
