@@ -7,6 +7,9 @@ echo "Getting Homebrew"
 defaults write com.apple.finder AppleShowAllFiles -bool true
 killall Finder
 
+# Use a more recent version of vim than the system one
+brew install vim --with-override-system-vi
+
 # get Vundle
 echo "Getting Vundle"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -55,15 +58,19 @@ git init --bare $HOME/.cfg
 source ~/.bash_profile
 config config --local status.showUntrackedFiles no
 
-# This is where I store all my code
-mkdir -p ~/Coding/Work
-mkdir -p ~/Coding/Personal
-
 brew install nvm
 mkdir ~/.nvm
 brew install yarn
 
-# https://www.getpostman.com/
+# Other utilities
 brew cask install postman
 brew cask install spectacle
 brew cask install skype
+
+# Remove outdated versions from the cellar.
+brew cleanup
+
+## PERSONAL PREFS
+# This is where I store all my code
+mkdir -p ~/Coding/Work
+mkdir -p ~/Coding/Personal
