@@ -63,5 +63,7 @@ brew install nvm
 mkdir ~/.nvm
 brew install yarn
 
+# https://www.getpostman.com/
+brew cask install postman
 brew cask install spectacle
 brew cask install skype
