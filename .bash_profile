@@ -97,6 +97,10 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # Make sure we run homebrew's python, not MAC default one
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
+# Ensure pipenv is happy https://github.com/pypa/pipenv/issues/538#issuecomment-330883025
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
 
