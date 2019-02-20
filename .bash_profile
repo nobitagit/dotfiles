@@ -94,6 +94,9 @@ export NVM_DIR="$HOME/.nvm"
 # https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
+# Make sure we run homebrew's python, not MAC default one
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 # pip should only run if there is a virtualenv currently activated
 export PIP_REQUIRE_VIRTUALENV=true
 
