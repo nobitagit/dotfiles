@@ -10,6 +10,13 @@ killall Finder
 # Use a more recent version of vim than the system one
 brew install vim --with-override-system-vi
 
+# Get Python (you will need to put it yourself in your PATH)
+# If you're not sure check https://stackoverflow.com/a/49631080/1446845
+brew install python
+# Pipenv https://docs.python-guide.org/dev/virtualenvs/#installing-pipenv
+# Like pip, bit more high level, so simpler to use and most of the times just enough
+brew install pipenv
+
 # get Vundle
 echo "Getting Vundle"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
