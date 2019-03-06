@@ -73,6 +73,8 @@ brew install yarn
 brew cask install postman
 brew cask install spectacle
 brew cask install skype
+# https://github.com/rauchg/wifi-password
+brew install wifi-password
 
 # Remove outdated versions from the cellar.
 brew cleanup
