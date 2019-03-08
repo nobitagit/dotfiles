@@ -69,6 +69,10 @@ brew install nvm
 mkdir ~/.nvm
 brew install yarn
 
+# This will not symlink the docker command, for that you'll need to run the app via spotlight or finder once
+brew cask install docker
+echo "Docker binaries have been installed, check https://stackoverflow.com/a/43365425/1446845 to complete installation"
+
 # Other utilities
 brew cask install postman
 brew cask install spectacle
