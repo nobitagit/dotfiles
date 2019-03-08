@@ -80,8 +80,12 @@ alias ws='open -a "webstorm"'
 alias cpbr='git name-rev --name-only HEAD | pbcopy'
 alias vsc='open -a Visual\ Studio\ Code'
 
-export PATH="$PATH:$HOME/.yarn/bin"
 export GOPATH=$HOME/go
+export PATH="$PATH:$HOME/.yarn/bin"
+
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+ulimit -n 8096
 
 # export NVM_DIR="/Users/Aurelio/.nvm"
 # [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -109,3 +113,6 @@ if [ -f '/Users/Aurelio/Code/google-cloud-sdk/path.bash.inc' ]; then source '/Us
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/Aurelio/Code/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/Aurelio/Code/google-cloud-sdk/completion.bash.inc'; fi
+
+# Load rbenv automatically
+"$(rbenv init -)"
