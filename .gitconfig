@@ -14,7 +14,7 @@
         name =
         email =
 [core]
-        excludesfile = /Users/nobitagit/.gitignore_global
+        excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
         cmd = opendiff \"$LOCAL\" \"$REMOTE\"
         path =
@@ -22,9 +22,14 @@
         cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
         trustExitCode = true
 [commit]
-        # template = /Users/nobitagit/.stCommitMsg
+        # template = ~\.stCommitMsg
 [filter "lfs"]
         clean = git-lfs clean -- %f
         smudge = git-lfs smudge -- %f
         process = git-lfs filter-process
         required = true
+[push]
+        # So we avoid having to explicitly git push -u origin mybranch on first push
+	# more info here https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault
+	# and here https://stackoverflow.com/a/948397/1446845
+	default = current
