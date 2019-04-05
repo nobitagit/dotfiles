@@ -58,6 +58,17 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
+# https://twitter.com/Herschel_R/status/1113095592559984641
+function npm_install {
+    if [ -f yarn.lock ]; then
+        yarn install $@
+    else
+        npm install $@
+    fi
+    touch ./node_modules/.metadata_never_index
+}
+alias yurn=npm_install
+
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob;
 
