@@ -77,8 +77,10 @@ echo "Docker binaries have been installed, check https://stackoverflow.com/a/433
 brew cask install postman
 brew cask install spectacle
 brew cask install skype
-# https://github.com/rauchg/wifi-password
+# Quickly remind mje the wifi password, https://github.com/rauchg/wifi-password
 brew install wifi-password
+# Capture screen in various formats, https://getkap.co/
+brew cask install kap
 
 # Remove outdated versions from the cellar.
 brew cleanup
@@ -86,4 +88,4 @@ brew cleanup
 ## PERSONAL PREFS
 # This is where I store all my code
 mkdir -p ~/Coding/Work
-mkdir -p ~/Coding/Personal
+mkdir ~/Coding/Personal
