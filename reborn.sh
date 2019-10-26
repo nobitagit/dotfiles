@@ -89,3 +89,8 @@ brew cleanup
 # This is where I store all my code
 mkdir -p ~/Coding/Work
 mkdir ~/Coding/Personal
+
+# get oh my zsh
+echo "installing oh my zsh..."
+curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+sh install.sh
