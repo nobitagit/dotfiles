@@ -98,3 +98,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Make sure we run homebrew's python, not MAC default one
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+# Ensure pipenv is happy https://github.com/pypa/pipenv/issues/538#issuecomment-330883025
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
