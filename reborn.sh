@@ -55,6 +55,9 @@ curl https://raw.githubusercontent.com/nobitagit/dotfiles/master/.vimrc > ~/.vim
 curl https://raw.githubusercontent.com/nobitagit/dotfiles/master/.bash_profile > ~/.bash_profile
 curl https://raw.githubusercontent.com/nobitagit/dotfiles/master/.git-completion.bash > ~/.git-completion.bash
 
+# Run vundle to install vim plugins
+vim +PluginInstall +qall
+
 echo "/n"
 echo "Setting up git config for Dotfiles"
 echo "see: https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/"
@@ -77,7 +80,7 @@ echo "Docker binaries have been installed, check https://stackoverflow.com/a/433
 brew cask install postman
 brew cask install spectacle
 brew cask install skype
-# Quickly remind mje the wifi password, https://github.com/rauchg/wifi-password
+# Quickly remind me the wifi password, https://github.com/rauchg/wifi-password
 brew install wifi-password
 # Capture screen in various formats, https://getkap.co/
 brew cask install kap
