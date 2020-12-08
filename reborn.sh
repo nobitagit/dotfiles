@@ -8,7 +8,8 @@ defaults write com.apple.finder AppleShowAllFiles -bool true
 killall Finder
 
 # Use a more recent version of vim than the system one
-brew install vim --with-override-system-vi
+brew install vim
+exec -l $SHELL
 
 # Get Python (you will need to put it yourself in your PATH)
 # If you're not sure check https://stackoverflow.com/a/49631080/1446845
