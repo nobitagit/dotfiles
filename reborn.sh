@@ -52,7 +52,9 @@ brew cask install iterm2
 echo "Sync Dotfiles"
 curl https://raw.githubusercontent.com/nobitagit/dotfiles/master/.gitconfig > ~/.gitconfig
 curl https://raw.githubusercontent.com/nobitagit/dotfiles/master/.vimrc > ~/.vimrc
-curl https://raw.githubusercontent.com/nobitagit/dotfiles/master/.bash_profile > ~/.bash_profile
+
+# Commenting out next line. This might not be needed anymore since everything should be in the zsh config
+# curl https://raw.githubusercontent.com/nobitagit/dotfiles/master/.bash_profile > ~/.bash_profile
 curl https://raw.githubusercontent.com/nobitagit/dotfiles/master/.git-completion.bash > ~/.git-completion.bash
 
 # Run vundle to install vim plugins
