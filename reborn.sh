@@ -36,19 +36,19 @@ rm -rf fonts
 echo "For More iTerm Powerline config see https://coderwall.com/p/yiot4q/setup-vim-powerline-and-iterm2-on-mac-os-x"
 
 echo "Installing some browsers: Google Chrome, Google Chrome Canary and Firefox"
-brew cask install google-chrome
-brew tap homebrew/cask-versions && brew cask install google-chrome-canary
-brew cask install firefox
+brew install --cask google-chrome
+brew tap homebrew/cask-versions && brew install --cask google-chrome-canary
+brew install --cask firefox
 
 echo "Installing Visual Studio Code"
-brew cask install visual-studio-code
+brew install --cask visual-studio-code
 echo "/n"
 echo "Enabling key repeat for VSCode Vim mode"
 # enable key repeating for VS Codes VIM mode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false         # For VS Code
 defaults write com.microsoft.VSCodeInsiders ApplePressAndHoldEnabled -bool false # For VS Code Insider
 
-brew cask install iterm2
+brew install --cask iterm2
 
 echo "Sync Dotfiles"
 curl https://raw.githubusercontent.com/nobitagit/dotfiles/master/.gitconfig > ~/.gitconfig
@@ -76,17 +76,17 @@ mkdir ~/.nvm
 brew install yarn
 
 # This will not symlink the docker command, for that you'll need to run the app via spotlight or finder once
-brew cask install docker
+brew install --cask docker
 echo "Docker binaries have been installed, check https://stackoverflow.com/a/43365425/1446845 to complete installation"
 
 # Other utilities
-brew cask install postman
-brew cask install spectacle
-brew cask install skype
+brew install --cask postman
+brew install --cask spectacle
+brew install --cask skype
 # Quickly remind me the wifi password, https://github.com/rauchg/wifi-password
 brew install wifi-password
 # Capture screen in various formats, https://getkap.co/
-brew cask install kap
+brew install --cask kap
 
 # Remove outdated versions from the cellar.
 brew cleanup
